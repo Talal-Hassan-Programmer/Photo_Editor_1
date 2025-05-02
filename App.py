@@ -47,6 +47,8 @@ EditMenu = Menu(MenuBar, tearoff=0)
 MenuBar.add_cascade(label="Edit", menu=EditMenu)
 
 #Commands for Edit Menu
+EditMenu.add_command(label="Undo",)
+EditMenu.add_command(label="Redo",)
 
 
 
