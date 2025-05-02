@@ -77,6 +77,13 @@ EnhanceMenu.add_command(label="Sharpness",)
 
 
 
+#1 - Enhance - Color Menu   ---------------------------------------------------------------------------> 
+ColorMenu = Menu(EnhanceMenu, tearoff=0)
+EnhanceMenu.add_cascade(label="Color", menu=ColorMenu)
+
+
+
+
 
 
 
