@@ -58,6 +58,10 @@ EffectMenu = Menu(MenuBar, tearoff=0)
 MenuBar.add_cascade(label="Effects", menu=EffectMenu)
 
 #Commands for Effect Menu
+EffectMenu.add_command(label="Grayscale",)
+EffectMenu.add_command(label="Sepia",)
+EffectMenu.add_command(label="Blur",)
+EffectMenu.add_command(label="Sharpen",)
 
 
 
