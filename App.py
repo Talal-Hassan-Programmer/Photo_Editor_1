@@ -81,6 +81,15 @@ EnhanceMenu.add_command(label="Sharpness",)
 ColorMenu = Menu(EnhanceMenu, tearoff=0)
 EnhanceMenu.add_cascade(label="Color", menu=ColorMenu)
 
+#commands for Color Menu
+ColorMenu.add_command(label="Hue",)
+ColorMenu.add_command(label="Saturation",)
+ColorMenu.add_command(label="Vibrance",)
+ColorMenu.add_command(label="Temperature",)
+ColorMenu.add_command(label="Color Balance",)
+ColorMenu.add_command(label="Tint",)
+ColorMenu.add_command(label="Gamma",)
+
 
 
 
