@@ -35,6 +35,9 @@ FileMenu = Menu(MenuBar, tearoff=0)
 MenuBar.add_cascade(label="File", menu=FileMenu)
 
 #Commands for File Menu
+FileMenu.add_command(label="Open",)
+FileMenu.add_command(label="Export",)
+FileMenu.add_command(label="Save",)
 
 
 
