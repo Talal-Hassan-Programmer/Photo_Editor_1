@@ -70,7 +70,10 @@ EffectMenu.add_command(label="Sharpen",)
 EnhanceMenu = Menu(MenuBar, tearoff=0)
 MenuBar.add_cascade(label="Enhance", menu=EnhanceMenu)
 
-#Commands for Effect Menu
+#Commands for Enhance Menu
+EnhanceMenu.add_command(label="Brightness",)
+EnhanceMenu.add_command(label="Contrast",)
+EnhanceMenu.add_command(label="Sharpness",)
 
 
 
