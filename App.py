@@ -1,7 +1,7 @@
 # Photo Editor
 
 #Imports
-from tkinter import Tk
+from tkinter import Tk, Menu
 
 
 # Main App
@@ -16,6 +16,13 @@ App.title("Photo Editor")
 App.geometry("800x600")
 App.config(bg="white")
 App.resizable(False, False)
+
+
+
+#Creating a menu bar
+#------------------------------------------------------------------------------------------------------------------------------------------------------------->
+MenuBar = App.menu = Menu(App)
+App.config(menu=MenuBar)
 
 
 
