@@ -2,6 +2,7 @@
 
 #Imports
 from tkinter import Tk, Menu, Canvas
+import Func  # Assuming Func.py contains the necessary functions for image handling
 
 
 # Main App
@@ -21,7 +22,7 @@ App.resizable(False, False)
 #Canvas For Image Display
 #------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-canvas = Canvas(App, width=500, height=500)  # Adjust size as needed
+canvas = Canvas(App, width=700, height=500)  # Adjust size as needed
 canvas.pack()
 
 
@@ -44,8 +45,7 @@ FileMenu = Menu(MenuBar, tearoff=0)
 MenuBar.add_cascade(label="File", menu=FileMenu)
 
 #Commands for File Menu
-FileMenu.add_command(label="Open",)
-FileMenu.add_command(label="Export",)
+FileMenu.add_command(label="Open", command=lambda: Func.open_image(canvas))  # Assuming Func.py has a function to open images
 FileMenu.add_command(label="Save",)
 
 
