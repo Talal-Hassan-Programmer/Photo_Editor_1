@@ -1,7 +1,7 @@
 # Photo Editor
 
 #Imports
-from tkinter import Tk, Menu
+from tkinter import Tk, Menu, Canvas
 
 
 # Main App
@@ -16,6 +16,15 @@ App.title("Photo Editor")
 App.geometry("800x600")
 App.config(bg="white")
 App.resizable(False, False)
+
+
+#Canvas For Image Display
+#------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+canvas = Canvas(App, width=500, height=500)  # Adjust size as needed
+canvas.pack()
+
+
 
 
 
