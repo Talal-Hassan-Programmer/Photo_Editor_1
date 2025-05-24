@@ -47,6 +47,7 @@ MenuBar.add_cascade(label="File", menu=FileMenu)
 #Commands for File Menu
 FileMenu.add_command(label="Open", command=lambda: Func.open_image(canvas))  # Assuming Func.py has a function to open images
 FileMenu.add_command(label="Save",)
+FileMenu.add_command(label="Exit", command=App.quit)
 
 
 
