@@ -1,7 +1,7 @@
 #This file is for all funcs in this project
 
-from tkinter import filedialog
-from PIL import Image, ImageTk
+from tkinter import filedialog, Scale
+from PIL import Image, ImageTk, ImageEnhance
 
 
 # This function opens an image file and displays it on the provided canvas.
@@ -41,3 +41,29 @@ def save_image(image):
     if file_path:
         image.save(file_path)  # Save the image
         print(f"Image saved to {file_path}")
+
+
+# This function updates the sharpness of the image displayed on the canvas based on the slider value.
+def adjust_sharpness(canvas, factor):
+    """Enhances sharpness using the Pillow image."""
+    if hasattr(canvas, "pil_image"):
+        enhancer = ImageEnhance.Sharpness(canvas.pil_image)  # ✅ Apply to correct image
+        new_image = enhancer.enhance(float(factor))  # Convert scale value
+
+        tk_image = ImageTk.PhotoImage(new_image)
+        canvas.create_image(0, 0, anchor="nw", image=tk_image)
+
+        # ✅ Update image references correctly
+        canvas.image = tk_image
+        canvas.pil_image = new_image  # Store the edited image
+
+
+
+# This function creates a slider for adjusting the sharpness of the image.
+def create_sharpness_slider(App, canvas):
+    """Creates a slider to control sharpness."""
+    sharpness_scale = Scale(App , from_=0.5, to=10, resolution=0.1,
+                               orient="horizontal", label="Sharpness",
+                               command=lambda v: adjust_sharpness(canvas, v))
+    sharpness_scale.set(1.0)  # Default sharpness
+    sharpness_scale.pack()

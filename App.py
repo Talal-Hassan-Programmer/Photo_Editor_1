@@ -74,7 +74,6 @@ EffectMenu.add_command(label="Blur",)
 EffectMenu.add_command(label="Sharpen",)
 
 
-
 #4 - MenuBar - Enhance Menu   --------------------------------------------------------------------------->
 
 EnhanceMenu = Menu(MenuBar, tearoff=0)
@@ -83,7 +82,8 @@ MenuBar.add_cascade(label="Enhance", menu=EnhanceMenu)
 #Commands for Enhance Menu
 EnhanceMenu.add_command(label="Brightness",)
 EnhanceMenu.add_command(label="Contrast",)
-EnhanceMenu.add_command(label="Sharpness",)
+EnhanceMenu.add_command(label="Sharpness", command=lambda: Func.create_sharpness_slider(App, canvas))  # Assuming Func.py has a function to create a sharpness slider for adjsting sharpness
+
 
 
 
